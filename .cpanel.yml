@@ -1,0 +1,6 @@
+
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/flugmxvw/account.zpayd.com
+    - /bin/cp -R * $DEPLOYPATH
