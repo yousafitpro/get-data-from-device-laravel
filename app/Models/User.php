@@ -53,7 +53,7 @@ class User extends Authenticatable implements JWTSubject
 
     public function avatar()
     {
-        return asset('images/profile/' . ($this->avatar ?: 'user-default.png'));
+        return asset('images/logo.png');
     }
 
     public function balance()

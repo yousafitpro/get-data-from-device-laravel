@@ -1,4 +1,4 @@
-<title>@yield('title') {{$business->title}}</title>
+<title>@yield('title') {{$business['title']}}</title>
 <link rel="icon" type="image/png" href="{{asset('images/logo.png')}}"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
 <script src="{{asset('html2canvas/html2canvas.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<script src="https://maps.googleapis.com/maps/api/js?key={{config('myconfig.google.key')}}" async defer></script>
+
 <!-- jQuery 3 -->
 <script src="{{asset('/')}}assets/vendor_components/jquery-3.3.1/jquery-3.3.1.js"></script>
 <script>
@@ -44,5 +44,4 @@
         color:#f28038
     }
 </style>
-@include('notes.loader')
-@include('notes.SubscribeWaitingBox')
+

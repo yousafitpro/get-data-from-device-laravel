@@ -38,7 +38,7 @@ class LoginController extends Controller
 
 //            if ($user->email_verified_at) {
                 if (auth()->attempt($data)) {
-                    ENVController::beforeLogin($user);
+
 
                     return redirect('dashboard',)->with([
                         'toast' => [

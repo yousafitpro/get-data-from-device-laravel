@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
         view()
             ->share([
-                'business' =>Business::first(),
+                'business' =>['logo'=>asset('images/logo.png'),'title'=>'asdas'],
                 'asset_v' => 2
             ]);
     }

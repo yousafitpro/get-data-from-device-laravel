@@ -8,15 +8,11 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\BillController;
 use App\Http\Controllers\ProfileController;
-
-
-
-
-
-
+Route::get('dashboard',function (){
+   return redirect('Datafile/Devices');
+});
 Route::get('test2',[\App\Http\Controllers\railzController::class,'sendTransaction2']);
 
-Route::group(function (){
         Route::get('/', [LoginController::class, 'index'])->name('login');
         Route::get('login', [LoginController::class, 'index']);
         Route::get('landing', function (){
@@ -26,11 +22,19 @@ Route::group(function (){
         Route::get('logout', [LoginController::class, 'logout']);
         Route::resource('register', RegisterController::class);
         Route::get('verify-email/{code}', [RegisterController::class, 'verify']);
-    });
+
 Route::middleware('auth')
     ->group(function () {
         Route::resource('profile', ProfileController::class);
     });
+
+
+Route::prefix('Datafile')
+    ->group(function (){
+        Route::get('Devices',[\App\Http\Controllers\DatafileController::class,'devices']);
+    });
+
+
 
 
 Route::get('change-password', [ProfileController::class, 'changePassword']);
@@ -43,14 +47,6 @@ Route::post('change-password', [ProfileController::class, 'changePasswordPost'])
 
     include ('setting.php');
 
-
-
-
-
-//include ('mybills.php');
-//include ('payee.php');
-//include ('contact.php');
-//include ('shared-bills.php');
 include ('auth.php');
 
 

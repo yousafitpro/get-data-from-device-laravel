@@ -43,8 +43,6 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \App\Http\Middleware\isBlocked::class,
-             \App\Http\Middleware\CheckIpMiddleware::class
         ],
 
         'api' => [
@@ -72,15 +70,5 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'admin' => AdminMiddleware::class,
-        'lender' => LenderMiddleware::class,
-        'user' => UserMiddleware::class,
-        '2FA'=>\App\Http\Middleware\TwoStepVerificationMiddleware::class,
-        'subscription'=>\App\Http\Middleware\SubscriptionMiddleware::class,
-        'api_key'=>\App\Http\Middleware\ApikeyMiddleware::class,
-        'is_active'=>\App\Http\Middleware\isBlocked::class,
-        'visitor'=>\App\Http\Middleware\trackVisitor::class,
-        'check-ip'=>\App\Http\Middleware\CheckIpMiddleware::class,
-        'check-fp'=>\App\Http\Middleware\CheckFPMiddleware::class,
-        'check-country'=>\App\Http\Middleware\CheckCountryMiddleware::class,
     ];
 }

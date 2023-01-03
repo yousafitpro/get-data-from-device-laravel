@@ -3,7 +3,7 @@
     <div class="logo-header" >
 
         <a href="{{url('/')}}" class="logo" >
-            <img src="{{asset('smallicons/logo-white.png')}}" alt="navbar brand" class="navbar-brand" style="width:40px">
+            <img src="{{asset('images/logo.png')}}" alt="navbar brand" class="navbar-brand" style="width:40px">
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
@@ -118,62 +118,62 @@
                     </a>
                     <ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
                         <li>
-                            <div class="dropdown-title">You have {{myalerts()->count()}} new notification</div>
+                            <div class="dropdown-title">You have 0 new notification</div>
                         </li>
                         <li>
                             <div class="notif-scroll scrollbar-outer">
                                 <div class="notif-center">
-                                    @foreach(myalerts() as $a)
-                                    <a href="#" onclick="showNoti('{{$a->title}}','{{$a->message}}')">
-                                        <div class="notif-icon notif-success"> <i class="fa fa-bell"></i> </div>
-                                        <div class="notif-content">
-													<span class="block">
-                                                        <label>{{substr($a->title,0,25)}}</label><br>
-														{{substr($a->message,0,30)}}...
-													</span>
-                                            <span class="time">{{$a->created_at->diffForHumans()}}</span>
-                                        </div>
-                                    </a>
+{{--                                    @foreach(myalerts() as $a)--}}
+{{--                                    <a href="#" onclick="showNoti('{{$a->title}}','{{$a->message}}')">--}}
+{{--                                        <div class="notif-icon notif-success"> <i class="fa fa-bell"></i> </div>--}}
+{{--                                        <div class="notif-content">--}}
+{{--													<span class="block">--}}
+{{--                                                        <label>{{substr($a->title,0,25)}}</label><br>--}}
+{{--														{{substr($a->message,0,30)}}...--}}
+{{--													</span>--}}
+{{--                                            <span class="time">{{$a->created_at->diffForHumans()}}</span>--}}
+{{--                                        </div>--}}
+{{--                                    </a>--}}
 
-                                        <div class="modal fade" id="noti{{$a->id}}" tabindex="-1" role="dialog"
-                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Alert</h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                                aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
+{{--                                        <div class="modal fade" id="noti{{$a->id}}" tabindex="-1" role="dialog"--}}
+{{--                                             aria-labelledby="exampleModalLabel" aria-hidden="true">--}}
+{{--                                            <div class="modal-dialog" role="document">--}}
+{{--                                                <div class="modal-content">--}}
+{{--                                                    <div class="modal-header">--}}
+{{--                                                        <h5 class="modal-title" id="exampleModalLabel">Alert</h5>--}}
+{{--                                                        <button type="button" class="close" data-dismiss="modal"--}}
+{{--                                                                aria-label="Close">--}}
+{{--                                                            <span aria-hidden="true">&times;</span>--}}
+{{--                                                        </button>--}}
+{{--                                                    </div>--}}
 
-                                                    <div class="modal-body">
-                                                        @csrf
-                                                        <div class="container-fluid">
-                                                            <div class="row">
-                                                                <div class="col-md-12">
+{{--                                                    <div class="modal-body">--}}
+{{--                                                        @csrf--}}
+{{--                                                        <div class="container-fluid">--}}
+{{--                                                            <div class="row">--}}
+{{--                                                                <div class="col-md-12">--}}
 
-                                                                    <h4>Are you sure you want to remove this payee ?</h4>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <hr>
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer ">
-
-                                                        <button type="button" class="btn btn-secondary pull-right" style="min-width: 70px"
-                                                                data-dismiss="modal"> Cancel
-                                                        </button>
+{{--                                                                    <h4>Are you sure you want to remove this payee ?</h4>--}}
+{{--                                                                </div>--}}
+{{--                                                            </div>--}}
 
 
-                                                    </div>
+{{--                                                            <hr>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="modal-footer ">--}}
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
+{{--                                                        <button type="button" class="btn btn-secondary pull-right" style="min-width: 70px"--}}
+{{--                                                                data-dismiss="modal"> Cancel--}}
+{{--                                                        </button>--}}
+
+
+{{--                                                    </div>--}}
+
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    @endforeach--}}
                                 </div>
                             </div>
                         </li>

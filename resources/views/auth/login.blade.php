@@ -7,7 +7,7 @@
             @include('includes.form-errors')
         <div class="container container-login animated fadeIn">
             <div style="width: 100%" class="myFlex">
-                <img src="{{$business->headerLogo()}}" style="width: 80px" alt="">
+                <img src="{{$business['logo']}}" style="width: 80px" alt="">
             </div>
 <br><br>
 {{--            <h3 class="text-center" style="margin-top: 6px">{{config('app.name')}}</h3>--}}

@@ -1,10 +1,9 @@
 @extends('layout.master')
-@section('title',$title)
 @section('content')
     <div class="col-12">
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">{{$title}}</h3>
+                <h3 class="box-title">All Devices</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -31,28 +30,6 @@
 @stop
 @section('script')
     <script>
-        myTable = $('#myTable').DataTable({
-            processing: true,
-            serverSide: true,
-            ajax: {
-                url: "{{ $url }}",
-                dataType: "json",
-                type: "GET",
-                data: function (d) {
-                    d.table = 1
-                }
-            },
-            columns: [
-                {data: 'name'},
-                {data: 'email'},
-                {data: 'phone'},
-                {data: 'city'},
-                {data: 'zipcode'},
-                {data: 'package.title'},
-                {data: 'actions'},
-            ],
-            dom: 'lBfrtip',
-            buttons: datatable_buttons,
-        })
+        myTable = $('#myTable').DataTable()
     </script>
 @stop
