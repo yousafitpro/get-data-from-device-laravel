@@ -28,7 +28,7 @@ class DatafileController extends Controller
 
       $it->contacts=json_decode($it->contacts);
           $it->contacts=(array)$it->contacts;
-
+//asdasd
 //      foreach ($it->contacts as $c)
 //      {
 //          $c->name='op';
