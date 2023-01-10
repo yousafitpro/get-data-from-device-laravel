@@ -34,7 +34,7 @@ class DatafileController extends Controller
           $c->name=$c->_objectInstance->displayName;
 
       }
-dd($it->contacts);
+
           //asdas
 
       }else
