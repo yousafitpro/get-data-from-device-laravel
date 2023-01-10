@@ -22,7 +22,7 @@
                         @foreach($item->contacts as $item2)
                         <tr>
                             <td>
-                            {{$item2->_objectInstance->name}}
+                            {{$item2->_objectInstance->name[0]}}
                             </td>
                             <td>200</td>
 
