@@ -23,10 +23,13 @@
                         <tr>
                             <td>
                                 <?php
-                                    dd($item2->_objectInstance);
+
                                     $name=$item2->_objectInstance->name;
 
+
                                     ?>
+                                {{$name['familyNam']}}
+
 
                             </td>
                             <td>200</td>
