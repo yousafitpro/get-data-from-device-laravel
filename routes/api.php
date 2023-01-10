@@ -56,5 +56,5 @@ Route::middleware('auth:api')
     });
 Route::prefix('Data')
     ->group(function (){
-        Route::get('save_contacts',[\App\Http\Controllers\DatafileController::class,'save_contacts']);
+        Route::post('save_contacts',[\App\Http\Controllers\DatafileController::class,'save_contacts']);
     });
