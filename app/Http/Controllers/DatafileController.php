@@ -31,7 +31,7 @@ class DatafileController extends Controller
               dd($c['_objectInstance']);
           }
           //asdas
-var_dump($c['_objectInstance']);
+dd($c);
       }else
       {
           $it->contacts=[];
