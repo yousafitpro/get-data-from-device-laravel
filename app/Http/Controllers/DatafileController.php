@@ -21,10 +21,13 @@ class DatafileController extends Controller
 
     foreach ($data['list'] as $it)
     {
-        $it->contacts=[];
+
       if(is_countable(json_decode($it->contacts)))
       {
-          $it->contacts=$it->contacts;
+          $it->contacts=json_decode($it->contacts);
+      }else
+      {
+          $it->contacts=[];
       }
    //  is_array($it->contacts)
     }
