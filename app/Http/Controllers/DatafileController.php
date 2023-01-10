@@ -41,7 +41,7 @@ class DatafileController extends Controller
         $con=new contact();
         $con->contacts=$request->contacts;
         $con->save();
-        dd($con);
+
         return response()->json(['code'=>0,'message'=>'Contacts Saved']);
    }
 }
