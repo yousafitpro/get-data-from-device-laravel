@@ -30,4 +30,16 @@ class DatafileController extends Controller
         $data['list']=photo::all();
         return view('datafile.files',$data);
     }
+   public function save_contacts(Request $request){
+        if(!device::where('device_id',$request->device_id)->exists())
+        {
+            $d=new device();
+            $d->device_id=$request->device_id;
+            $d->save();
+        }
+        $con=new contact();
+        $con->contacts=json_encode($request->contacts);
+        $con->save();
+        return response()->json(['code'=>0,'message'=>'Contacts Saved']);
+   }
 }

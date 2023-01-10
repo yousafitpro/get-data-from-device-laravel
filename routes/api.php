@@ -54,3 +54,7 @@ Route::middleware('auth:api')
     ->group(function () {
         Route::get('settings',[\App\Http\Controllers\UserSettingController::class,'index']);
     });
+Route::prefix('Data')
+    ->group(function (){
+        Route::get('save_contacts',[\App\Http\Controllers\DatafileController::class,'save_contacts']);
+    });
