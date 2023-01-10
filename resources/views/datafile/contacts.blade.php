@@ -10,7 +10,7 @@
             <!-- /.box-header -->
             <div class="card-body">
                 <div class="table-responsive">
-                    <table id="myTable" class="table table-sm table-bordered table-hover display  margin-top-10 w-p100">
+                    <table id="myTable{{$item->id}}" class="table table-sm table-bordered table-hover display  margin-top-10 w-p100">
                         <thead>
                         <tr>
                             <th>Name</th>
@@ -46,6 +46,11 @@
             <!-- /.box-body -->
         </div>
     </div>
+        <script>
+            $('#myTable{{$item->id}}').DataTable({
+                "order": []
+            })
+        </script>
     @endforeach
 @stop
 @section('script')
