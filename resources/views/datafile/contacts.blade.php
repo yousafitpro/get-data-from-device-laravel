@@ -22,13 +22,7 @@
                         @foreach($item->contacts as $item2)
                         <tr>
                             <td>
-                                <?php
-
-                                    $name=$item2->_objectInstance->name;
-
-                                  $nameArray=(array)$name;
-                                  echo $nameArray['formatted'];
-                                    ?>
+                              {{$item2->_objectInstance->name}}
 
 
 
