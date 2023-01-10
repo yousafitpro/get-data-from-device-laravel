@@ -24,9 +24,9 @@
                             <td>
                                 <?php
                                     $name=$item2->_objectInstance->name;
-                                dd($name->formatted);
-                                    ?>
 
+                                    ?>
+{{$name->formatted}}
                             </td>
                             <td>200</td>
 
