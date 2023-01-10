@@ -20,7 +20,7 @@ class DatafileController extends Controller
         $data['list']=contact::where('device_id',$request->device_id)->get();
     foreach ($data['list'] as $it)
     {
-        var_dump($it);
+        var_dump(count($it->contacts));
     }
     dd("ok");
         return view('datafile.contacts',$data);
