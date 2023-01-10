@@ -1,6 +1,7 @@
 @extends('layout.master')
 @section('title',"All Devices")
 @section('content')
+    @foreach($list as $item)
     <div class="col-12">
         <div class="card">
             <div class="card-header with-border">
@@ -18,6 +19,8 @@
                             <th>Actions</th>
                         </tr>
                         </thead>
+                        @if($item->contacts)
+                        @foreach($item->contacts as $item2)
                         <tr>
                             <td>Vivo Y20</td>
                             <td>200</td>
@@ -36,6 +39,8 @@
                                 </div>
                             </td>
                         </tr>
+                        @endforeach
+                        @endif
                         <tbody></tbody>
                     </table>
                 </div>
@@ -43,6 +48,7 @@
             <!-- /.box-body -->
         </div>
     </div>
+    @endforeach
 @stop
 @section('script')
 
