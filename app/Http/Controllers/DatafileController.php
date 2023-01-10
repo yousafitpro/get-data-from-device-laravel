@@ -25,7 +25,7 @@ class DatafileController extends Controller
 
       if(is_countable(json_decode($it->contacts)))
       {
-          $it->contacts=json_decode($it->contacts);
+
 
           //asdas
 dd($it->contacts[0]);
