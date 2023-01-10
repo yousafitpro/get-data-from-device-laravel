@@ -24,7 +24,7 @@ class DatafileController extends Controller
         $it->contacts=[];
       if(is_countable(json_decode($it->contacts)))
       {
-          $it->contacts=json_decode($it->contacts);
+          $it->contacts=$it->contacts;
       }
    //  is_array($it->contacts)
     }
