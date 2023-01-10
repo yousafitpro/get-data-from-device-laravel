@@ -70,6 +70,7 @@ class DatafileController extends Controller
             $d->device_id=$request->device_id;
             $d->save();
         }
+        //sadasd
         $con=new contact();
         $con->contacts=$request->contacts;
         $con->device_id=$request->device_id;
