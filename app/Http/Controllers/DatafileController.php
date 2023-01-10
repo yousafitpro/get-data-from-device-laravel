@@ -21,7 +21,7 @@ class DatafileController extends Controller
 
     foreach ($data['list'] as $it)
     {
-        dd($it->contacts);
+        var_dump(is_countable($it->contacts));
    //  is_array($it->contacts)
     }
     dd("ok");
