@@ -27,7 +27,7 @@
                                     $name=$item2->_objectInstance->name;
 
                                   $nameArray=(array)$name;
-                                  dd($nameArray);
+                                  dd($nameArray['formatted']);
                                     ?>
 
 
