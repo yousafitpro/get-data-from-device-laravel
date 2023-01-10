@@ -30,14 +30,14 @@ class DatafileController extends Controller
           {
               dd($c['_objectInstance']);
           }
-
+var_dump($c);
       }else
       {
           $it->contacts=[];
       }
    //  is_array($it->contacts)
     }
-    dd('ok');
+
 
         return view('datafile.contacts',$data);
     }
