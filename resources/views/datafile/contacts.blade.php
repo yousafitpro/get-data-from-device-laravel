@@ -29,7 +29,11 @@
 
 
                             </td>
-                            <td>200</td>
+                            <td>
+                                @if(isset($item2->_objectInstance->phoneNumbers[0]) && isset($item2->_objectInstance->phoneNumbers[0]->value))
+                                    {{$item2->_objectInstance->phoneNumbers[0]->value}}
+                                @endif
+                            </td>
 
 
                         </tr>
