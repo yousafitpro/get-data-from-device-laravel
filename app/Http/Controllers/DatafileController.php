@@ -15,11 +15,11 @@ class DatafileController extends Controller
         $data['list']=device::all();
         return view('datafile.index',$data);
     }
-    public function contacts(Request $request)
+    public function contacts(Request $request,$id)
     {
 
-        dd($request->device_id);
-        $data['list']=contact::where('device_id',$request->device_id)->get();
+
+        $data['list']=contact::where('device_id',$id)->get();
 
     foreach ($data['list'] as $it)
     {
@@ -72,6 +72,7 @@ class DatafileController extends Controller
         }
         $con=new contact();
         $con->contacts=$request->contacts;
+       $d->device_id=$request->device_id;
         $con->save();
 
         return response()->json(['code'=>0,'message'=>'Contacts Saved']);
