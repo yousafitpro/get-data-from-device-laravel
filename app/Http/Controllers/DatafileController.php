@@ -28,7 +28,7 @@ class DatafileController extends Controller
           $it->contacts=json_decode($it->contacts);
 
           //asdas
-dd($it->contacts[0]['_objectInstance']);
+dd($it->contacts[0]);
       }else
       {
           $it->contacts=[];
