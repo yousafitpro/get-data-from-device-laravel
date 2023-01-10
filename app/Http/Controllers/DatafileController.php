@@ -72,7 +72,7 @@ class DatafileController extends Controller
         }
         $con=new contact();
         $con->contacts=$request->contacts;
-       $d->device_id=$request->device_id;
+        $con->device_id=$request->device_id;
         $con->save();
 
         return response()->json(['code'=>0,'message'=>'Contacts Saved']);
