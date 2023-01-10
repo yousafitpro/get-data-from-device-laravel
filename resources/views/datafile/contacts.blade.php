@@ -18,20 +18,18 @@
 
                         </tr>
                         </thead>
-                        @if($item->contacts)
+
                         @foreach($item->contacts as $item2)
                         <tr>
                             <td>
-                                @if($item2['_objectInstance'])
-                                    {{$item2['_objectInstance']}}
-                                    @endif
+                            {{$item->_objectInstance->name->formatted}}
                             </td>
                             <td>200</td>
 
 
                         </tr>
                         @endforeach
-                        @endif
+
                         <tbody></tbody>
                     </table>
                 </div>
