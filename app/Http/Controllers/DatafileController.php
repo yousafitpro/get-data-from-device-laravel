@@ -32,9 +32,9 @@ class DatafileController extends Controller
       foreach ($it->contacts as $c)
       {
           $c->name='op';
-          if (isset($c->_objectInstance->name) && isset($c->_objectInstance->name->formated))
+          if (isset($c->_objectInstance->name) && isset($c->_objectInstance->name->formatted))
           {
-              $c->name=$c->_objectInstance->name->formated;
+              $c->name=$c->_objectInstance->name->formatted;
           }
 
 
