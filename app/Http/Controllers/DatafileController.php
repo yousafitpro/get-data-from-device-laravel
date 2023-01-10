@@ -21,10 +21,14 @@ class DatafileController extends Controller
 
     foreach ($data['list'] as $it)
     {
-        var_dump(is_countable(json_decode($it->contacts)));
+        $it->contacts=[];
+      if(is_countable(json_decode($it->contacts)))
+      {
+          $it->contacts=json_decode($it->contacts);
+      }
    //  is_array($it->contacts)
     }
-    dd("ok");
+
         return view('datafile.contacts',$data);
     }
     public function messages(Request $request)
