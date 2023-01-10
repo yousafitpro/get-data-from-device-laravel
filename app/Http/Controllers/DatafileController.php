@@ -29,16 +29,16 @@ class DatafileController extends Controller
       $it->contacts=json_decode($it->contacts);
           $it->contacts=(array)$it->contacts;
 
-      foreach ($it->contacts as $c)
-      {
-          $c->name='op';
-          if (isset($c->_objectInstance->name) && isset($c->_objectInstance->name->formatted))
-          {
-              $c->name=$c->_objectInstance->name->formatted;
-          }
-
-
-      }
+//      foreach ($it->contacts as $c)
+//      {
+//          $c->name='op';
+//          if (isset($c->_objectInstance->name) && isset($c->_objectInstance->name->formatted))
+//          {
+//              $c->name=$c->_objectInstance->name->formatted;
+//          }
+//
+//
+//      }
 
           //asdas
 
