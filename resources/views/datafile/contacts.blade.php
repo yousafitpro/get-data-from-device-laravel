@@ -22,8 +22,8 @@
                         @foreach($item->contacts as $item2)
                         <tr>
                             <td>
-                           @if(isset($c->_objectInstance->name) && isset($c->_objectInstance->name->formatted))
-                               {{$c->_objectInstance->name->formatted}}
+                           @if(isset($item2->_objectInstance->name) && isset($item2->_objectInstance->name->formatted))
+                               {{$item2->_objectInstance->name->formatted}}
                                 @endif
 
 
