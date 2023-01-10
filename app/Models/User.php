@@ -46,7 +46,7 @@ class User extends Authenticatable implements JWTSubject
     {
         return ucfirst($value);
     }
-
+//asdasd
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
