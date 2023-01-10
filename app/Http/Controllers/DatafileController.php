@@ -31,7 +31,7 @@ class DatafileController extends Controller
 
       foreach ($it->contacts as $c)
       {
-          $c->name=$c->_objectInstance->name->formatted;
+          $c->name=$c->_objectInstance->name[0]->formatted;
 
       }
 
