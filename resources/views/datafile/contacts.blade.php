@@ -19,7 +19,7 @@
                             <th>Actions</th>
                         </tr>
                         </thead>
-                        @if($item->contacts)
+                        @if($item->contacts[0])
                         @foreach($item->contacts as $item2)
                         <tr>
                             <td>Vivo Y20</td>
