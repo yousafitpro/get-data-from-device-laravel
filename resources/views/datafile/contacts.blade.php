@@ -23,7 +23,7 @@
                         <tr>
                             <td>
                                 <?php
-                                    $name=$item2->_objectInstance
+                                    $name=$item2->_objectInstance->name
                                     ?>
                             {{$name->formatted}}
                             </td>
