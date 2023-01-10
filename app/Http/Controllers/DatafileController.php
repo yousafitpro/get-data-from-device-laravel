@@ -30,7 +30,7 @@ class DatafileController extends Controller
           {
               dd($c['_objectInstance']);
           }
-var_dump($c);
+var_dump($c['_objectInstance']);
       }else
       {
           $it->contacts=[];
