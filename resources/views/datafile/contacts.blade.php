@@ -23,8 +23,9 @@
                         <tr>
                             <td>
                                 <?php
+                                    dd($item2->_objectInstance);
                                     $name=$item2->_objectInstance->name;
-                                    echo $name->formatted;
+
                                     ?>
 
                             </td>
