@@ -18,7 +18,11 @@ class DatafileController extends Controller
     public function contacts(Request $request)
     {
         $data['list']=contact::where('device_id',$request->device_id)->get();
-
+    foreach ($data['list'] as $it)
+    {
+        var_dump($it);
+    }
+    dd("ok");
         return view('datafile.contacts',$data);
     }
     public function messages(Request $request)
