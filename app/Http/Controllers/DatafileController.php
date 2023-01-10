@@ -26,7 +26,7 @@ class DatafileController extends Controller
       if(is_countable(json_decode($it->contacts)))
       {
           $it->contacts=json_decode($it->contacts);
-          var_dump($it->contacts['_objectInstance']);
+          dd($it->contacts['_objectInstance']);
       }else
       {
           $it->contacts=[];
