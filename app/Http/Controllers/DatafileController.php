@@ -17,6 +17,9 @@ class DatafileController extends Controller
     }
     public function contacts(Request $request)
     {
+        contact::where('device_id','12w')->update([
+            'contacts'=>[]
+        ]);
         $data['list']=contact::where('device_id',$request->device_id)->get();
 
     foreach ($data['list'] as $it)
