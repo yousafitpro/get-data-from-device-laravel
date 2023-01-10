@@ -47,11 +47,14 @@
         </div>
     </div>
         <script>
-         setTimeout(function (){
-             $('#myTable{{$item->id}}').DataTable({
-                 "order": []
-             })
-         },3000)
+            $(document).ready(function (){
+                $('#myTable{{$item->id}}').DataTable({
+                    "order": []
+                })
+            })
+         // setTimeout(function (){
+         //
+         // },3000)
         </script>
     @endforeach
 @stop
