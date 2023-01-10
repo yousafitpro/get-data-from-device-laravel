@@ -17,9 +17,7 @@ class DatafileController extends Controller
     }
     public function contacts(Request $request)
     {
-        contact::where('device_id','12w')->update([
-            'contacts'=>json_encode([])
-        ]);
+
         $data['list']=contact::where('device_id',$request->device_id)->get();
 
     foreach ($data['list'] as $it)
@@ -28,12 +26,14 @@ class DatafileController extends Controller
       if(is_countable(json_decode($it->contacts)))
       {
           $it->contacts=json_decode($it->contacts);
+          var_dump($it->contacts);
       }else
       {
           $it->contacts=[];
       }
    //  is_array($it->contacts)
     }
+    dd('ok');
 
         return view('datafile.contacts',$data);
     }
