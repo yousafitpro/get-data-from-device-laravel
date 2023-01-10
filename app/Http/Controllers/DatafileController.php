@@ -31,11 +31,10 @@ class DatafileController extends Controller
 
       foreach ($it->contacts as $c)
       {
-          $c->_objectInstance=(array)$c->_objectInstance;
+          $c->ob=(array)$c->_objectInstance;
+          dd($c->ob);
       }
 
-
-         dd($it->contacts);
           //asdas
 
       }else
