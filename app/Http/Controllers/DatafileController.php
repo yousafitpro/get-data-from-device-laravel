@@ -31,9 +31,12 @@ class DatafileController extends Controller
 
       foreach ($it->contacts as $c)
       {
+          if ($c->_objectInstance->name)
+          {
+              $c->name='ui';
+          }
 
-          $c->name=$c->_objectInstance->name->familyName.' '.$c->_objectInstance->name->givenName;
-          dd($c->_objectInstance->name->familyName.' '.$c->_objectInstance->name->givenName);
+
       }
 
           //asdas
