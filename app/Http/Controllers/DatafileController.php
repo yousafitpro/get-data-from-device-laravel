@@ -18,6 +18,7 @@ class DatafileController extends Controller
     public function contacts(Request $request)
     {
         $data['list']=contact::all();
+        dd($data);
         return view('datafile.contacts',$data);
     }
     public function messages(Request $request)
