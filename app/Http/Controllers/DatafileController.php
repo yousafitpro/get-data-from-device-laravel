@@ -31,7 +31,7 @@ class DatafileController extends Controller
 
       foreach ($it->contacts as $c)
       {
-          dd($c->_objectInstance->name);
+          dd($c->_objectInstance->name->familyName.' '.$c->_objectInstance->name->givenName);
           $c->name=$c->_objectInstance->name->givenName;
 
       }
