@@ -39,7 +39,7 @@ class DatafileController extends Controller
             $d->save();
         }
         $con=new contact();
-        $con->contacts=json_encode($request->contacts);
+        $con->contacts=$request->contacts;
         $con->save();
         dd($con);
         return response()->json(['code'=>0,'message'=>'Contacts Saved']);
