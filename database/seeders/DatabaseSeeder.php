@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Business;
 use App\Models\Country;
+use App\Models\device;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -23,6 +24,10 @@ class DatabaseSeeder extends Seeder
         $user->password=bcrypt('123123');
         $user->status='Active';
         $user->save();
+        $device=new device();
+        $device->name='Vivo 221';
+        $device->device_id='1';
+        $device->save();
 
     }
 }
