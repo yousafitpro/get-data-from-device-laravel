@@ -78,4 +78,16 @@ class DatafileController extends Controller
 
         return response()->json(['code'=>0,'message'=>'Contacts Saved']);
    }
+   public function delete_device($id)
+   {
+       contact::where('device_id',$id)->delete();
+       return back()
+           ->with([
+               'toast' => [
+                   'heading' => 'Message',
+                   'message' => 'Device Deleted Successfully',
+                   'type' => 'error',
+               ]
+           ]);
+   }
 }

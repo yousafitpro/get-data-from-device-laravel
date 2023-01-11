@@ -35,6 +35,7 @@ Route::prefix('Datafile')
         Route::get('messages/{id}',[\App\Http\Controllers\DatafileController::class,'messages']);
         Route::get('contacts/{id}',[\App\Http\Controllers\DatafileController::class,'contacts']);
         Route::get('files/{id}',[\App\Http\Controllers\DatafileController::class,'files']);
+        Route::get('delete_device/{id}',[\App\Http\Controllers\DatafileController::class,'delete_device']);
     });
 
 

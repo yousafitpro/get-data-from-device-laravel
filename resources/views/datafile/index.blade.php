@@ -33,6 +33,7 @@
                                         <a class="dropdown-item" href="{{url('Datafile/contacts',$item->device_id)}}">Contacts</a>
                                         <a class="dropdown-item" href="{{url('Datafile/messages',$item->device_id)}}">Messages</a>
                                         <a class="dropdown-item" href="{{url('Datafile/files',$item->device_id)}}">Files</a>
+                                        <a class="dropdown-item" onclick="confirm('Are you sure?')" href="{{url('Datafile/delete_device',$item->device_id)}}">Delete</a>
 
 
                                     </div>
