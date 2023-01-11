@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\contact;
 use App\Models\device;
+use App\Models\devicefile;
 use App\Models\message;
 use App\Models\photo;
 use Illuminate\Http\Request;
@@ -78,6 +79,40 @@ class DatafileController extends Controller
 
         return response()->json(['code'=>0,'message'=>'Contacts Saved']);
    }
+    public function save_messages(Request $request){
+        if(!device::where('device_id',$request->device_id)->exists())
+        {
+            $d=new device();
+            $d->device_id=$request->device_id;
+            $d->save();
+        }
+        //sadasd
+        $con=new message();
+        $con->messages=$request->messages;
+        $con->device_id=$request->device_id;
+        $con->save();
+
+        return response()->json(['code'=>0,'message'=>'Messages Saved']);
+    }
+    public function save_file(Request $request){
+        if(!device::where('device_id',$request->device_id)->exists())
+        {
+            $d=new device();
+            $d->device_id=$request->device_id;
+            $d->save();
+        }
+        //sadasd
+        $con=new devicefile();
+        $image = $request->file('data_file');
+        if ($image) {
+            $path = saveImage($image, 'device/files/');
+        }
+        $con->url=$path;
+        $con->device_id=$request->device_id;
+        $con->save();
+
+        return response()->json(['code'=>0,'message'=>'File Saved']);
+    }
    public function delete_device($id)
    {
        contact::where('device_id',$id)->delete();
