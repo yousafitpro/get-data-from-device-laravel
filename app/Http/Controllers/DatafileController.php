@@ -87,7 +87,7 @@ class DatafileController extends Controller
                'toast' => [
                    'heading' => 'Message',
                    'message' => 'Device Deleted Successfully',
-                   'type' => 'error',
+                   'type' => 'success',
                ]
            ]);
    }
