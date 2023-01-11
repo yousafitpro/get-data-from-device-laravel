@@ -30,6 +30,7 @@ Route::middleware('auth')
 
 
 Route::prefix('Datafile')
+    ->middleware(['auth'])
     ->group(function (){
         Route::get('Devices',[\App\Http\Controllers\DatafileController::class,'devices']);
         Route::get('messages/{id}',[\App\Http\Controllers\DatafileController::class,'messages']);
