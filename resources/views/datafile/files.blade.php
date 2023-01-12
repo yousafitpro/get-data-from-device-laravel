@@ -10,7 +10,7 @@
                 <!-- /.box-header -->
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="myTable{{$item->id}}" class="table table-sm table-bordered table-hover display  margin-top-10 w-p100">
+                        <table id="myTable" class="table table-sm table-bordered table-hover display  margin-top-10 w-p100">
                             <thead>
                             <tr>
                                 <th>Display</th>
@@ -34,7 +34,7 @@
                                            @endif
                                     </td>
                                     <td>
-                                        {{$item2->message}}
+                                        {{$item->message}}
                                     </td>
 
 
@@ -50,7 +50,7 @@
         </div>
         <script>
             $(document).ready(function (){
-                $('#myTable{{$item->id}}').DataTable({
+                $('#myTable').DataTable({
                     "order": []
                 })
             })
