@@ -56,12 +56,13 @@ class DatafileController extends Controller
     }
     public function messages(Request $request)
     {
+        //sadsad
         $data['list']=message::all();
         return view('datafile.messages',$data);
     }
     public function files(Request $request)
     {
-        $data['list']=photo::all();
+        $data['list']=devicefile::all();
         return view('datafile.files',$data);
     }
    public function save_contacts(Request $request){

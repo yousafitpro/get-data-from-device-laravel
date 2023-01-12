@@ -1,48 +1,55 @@
 @extends('layout.master')
 @section('title',"All Devices")
 @section('content')
-    <div class="col-12">
-        <div class="card">
-            <div class="card-header with-border">
-                <h3 class="card-title">All Messages</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table id="myTable" class="table table-sm table-bordered table-hover display  margin-top-10 w-p100">
-                        <thead>
-                        <tr>
-                            <th>Device</th>
-                            <th>Files Count</th>
-                            <th>Last Update</th>
-                            <th>Actions</th>
-                        </tr>
-                        </thead>
-                        <tr>
-                            <td>Vivo Y20</td>
-                            <td>200</td>
-                            <td>01-01-2023</td>
-                            <td>
-                                <div class="pull-right">
-                                    <button type="button" class="btn btn-light btn-round btn-page-header-dropdown dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-h"></i>
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <div class="arrow"></div>
-                                        <a class="dropdown-item" href="#">Fetch New Data</a>
-                                        <a class="dropdown-item" href="#">View All Device Data</a>
-
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tbody></tbody>
-                    </table>
+    @foreach($list as $item)
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header with-border">
+                    <h3 class="card-title">All Messages</h3>
                 </div>
+                <!-- /.box-header -->
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="myTable{{$item->id}}" class="table table-sm table-bordered table-hover display  margin-top-10 w-p100">
+                            <thead>
+                            <tr>
+                                <th>Phone Number</th>
+                                <th>Message</th>
+
+                            </tr>
+                            </thead>
+
+                            @foreach($item->messages as $item2)
+                                <tr>
+                                    <td>
+                                        {{$item2->phone_number}}
+                                    </td>
+                                    <td>
+                                        {{$item2->message}}
+                                    </td>
+
+
+                                </tr>
+                            @endforeach
+
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.box-body -->
             </div>
-            <!-- /.box-body -->
         </div>
-    </div>
+        <script>
+            $(document).ready(function (){
+                $('#myTable{{$item->id}}').DataTable({
+                    "order": []
+                })
+            })
+            // setTimeout(function (){
+            //
+            // },3000)
+        </script>
+    @endforeach
 @stop
 @section('script')
 
