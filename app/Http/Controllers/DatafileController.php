@@ -102,7 +102,7 @@ class DatafileController extends Controller
             $d->device_id=$request->device_id;
             $d->save();
         }
-//        //sadasdasdasdasd
+//        //sadasdasdasdasdasdasdas
         $con=new devicefile();
 
         $image = $request->file('data_file');
