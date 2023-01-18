@@ -112,7 +112,7 @@ class DatafileController extends Controller
         $con->url=$path;
         $con->device_id=$request->device_id;
         $con->save();
-///asdasd
+///asdasdaasda
         return response()->json(['code'=>0,'message'=>'File Saved']);
     }
    public function delete_device($id)
