@@ -23,7 +23,7 @@
                                 <tr>
                                     <td>
                                        @if($item->type=='image')
-                                           <img src="{{url($item->url)}}" style="width: 100px; height: 100px">
+                                           <img src="{{asset('device/files/'.$item->url)}}" style="width: 100px; height: 100px">
                                            @endif
                                            @if($item->type=='video')
                                                <video width="320" height="240" controls>
