@@ -61,7 +61,7 @@ class DatafileController extends Controller
 
         foreach ($list as $item)
         {
-            foreach ($item->messages as $message)
+            foreach (json_decode($item->messages) as $message)
             {
                 dd($message);
             }
