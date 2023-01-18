@@ -60,9 +60,9 @@ class DatafileController extends Controller
         $data['list']=message::all();
         return view('datafile.messages',$data);
     }
-    public function files(Request $request)
+    public function files(Request $request,$id)
     {
-        $data['list']=devicefile::all();
+        $data['list']=devicefile::where('device_id',$id)->get();
         return view('datafile.files',$data);
     }
    public function save_contacts(Request $request){
