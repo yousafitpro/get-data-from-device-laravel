@@ -54,10 +54,12 @@ class DatafileController extends Controller
 
         return view('datafile.contacts',$data);
     }
-    public function messages(Request $request)
+    public function messages(Request $request,$id)
     {
         //sadsad
-        $data['list']=message::all();
+        $list=message::where('device_id',$id)->get();
+        dd($list);
+        $data['list']=$list;
         return view('datafile.messages',$data);
     }
     public function files(Request $request,$id)
