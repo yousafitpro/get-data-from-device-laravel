@@ -62,13 +62,10 @@ class DatafileController extends Controller
         foreach ($list as $item)
         {
             $item->messages=json_decode($item->messages);
-            foreach ($item->messages  as $message)
-            {
-                dd($message);
-            }
+
         }
         $data['list']=$list;
-
+//asdasd
         return view('datafile.messages',$data);
     }
     public function files(Request $request,$id)
