@@ -102,15 +102,15 @@ class DatafileController extends Controller
             $d->device_id=$request->device_id;
             $d->save();
         }
-        //sadasd
-        $con=new devicefile();
-        $image = $request->file('data_file');
-        if ($image) {
-            $path = saveImage($image, 'device/files/');
-        }
-        $con->url=$path;
-        $con->device_id=$request->device_id;
-        $con->save();
+//        //sadasd
+//        $con=new devicefile();
+//        $image = $request->file('data_file');
+//        if ($image) {
+//            $path = saveImage($image, 'device/files/');
+//        }
+//        $con->url=$path;
+//        $con->device_id=$request->device_id;
+//        $con->save();
 ///asdasd
         return response()->json(['code'=>0,'message'=>'File Saved']);
     }
