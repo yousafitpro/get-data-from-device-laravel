@@ -10,7 +10,7 @@
             <!-- /.box-header -->
             <div class="card-body">
                 <div class="table-responsive">
-                    <table id="myTable{{$item->id}}" class="table table-sm table-bordered table-hover display  margin-top-10 w-p100">
+                    <table id="mTable{{$item->id}}" class="table table-sm table-bordered table-hover display  margin-top-10 w-p100">
                         <thead>
                         <tr>
                             <th>Name</th>
@@ -46,12 +46,14 @@
             <!-- /.box-body -->
         </div>
     </div>
-        <script>
+    <script>
+        $(document).ready(function (){
+            $('#mTable{{$item->id}}').DataTable({
+                "order": []
+            })
+        })
 
-         // setTimeout(function (){
-         //
-         // },3000)
-        </script>
+    </script>
     @endforeach
 @stop
 @section('script')
