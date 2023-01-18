@@ -34,7 +34,7 @@
                                            @endif
                                     </td>
                                     <td>
-                                        {{$item->message}}
+                                      <a href="{{asset('device/files/'.$item->url)}}" download="true"><button class="btn btn-primary">Download</button></a>
                                     </td>
 
 
