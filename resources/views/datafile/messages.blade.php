@@ -22,10 +22,10 @@
                             @foreach($item->messages as $item2)
                                 <tr>
                                     <td>
-                                        {{$item2->phone_number}}
+                                        {{$item2->address}}
                                     </td>
                                     <td>
-                                        {{$item2->message}}
+                                        {{$item2->body}}
                                     </td>
 
 
