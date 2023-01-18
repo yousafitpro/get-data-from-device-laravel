@@ -47,11 +47,7 @@
         </div>
     </div>
         <script>
-            $(document).ready(function (){
-                $('#myTable{{$item->id}}').DataTable({
-                    "order": []
-                })
-            })
+
          // setTimeout(function (){
          //
          // },3000)
