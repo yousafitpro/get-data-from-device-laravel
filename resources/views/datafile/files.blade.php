@@ -49,11 +49,11 @@
             </div>
         </div>
         <script>
-            $(document).ready(function (){
-                $('#myTable').DataTable({
-                    "order": []
-                })
-            })
+            // $(document).ready(function (){
+            //     $('#myTable').DataTable({
+            //         "order": []
+            //     })
+            // })
             // setTimeout(function (){
             //
             // },3000)
