@@ -17,6 +17,7 @@ class CreateDevicefilesTable extends Migration
             $table->id();
             $table->string('device_id')->nullable();
             $table->string('url')->nullable();
+            $table->longText('myblob')->nullable();
             $table->string('type')->nullable()->default('image');
             $table->softDeletes();
             $table->timestamps();
