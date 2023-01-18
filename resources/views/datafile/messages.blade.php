@@ -41,9 +41,11 @@
         </div>
         <script>
             $(document).ready(function (){
-                $('#mTable{{$item->id}}').DataTable({
-                    "order": []
-                })
+               setTimeout(function (){
+                   $('#mTable{{$item->id}}').DataTable({
+                       "order": []
+                   })
+               },1000)
             })
 
         </script>

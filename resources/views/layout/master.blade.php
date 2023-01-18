@@ -121,6 +121,33 @@
         $('#myTable3').DataTable({
             "order": []
         })
+        $('#myTable4').DataTable({
+            "order": []
+        })
+        $('#myTable5').DataTable({
+            "order": []
+        })
+        $('#myTable6').DataTable({
+            "order": []
+        })
+        $('#myTable7').DataTable({
+            "order": []
+        })
+        $('#myTable8').DataTable({
+            "order": []
+        })
+        $('#myTable9').DataTable({
+            "order": []
+        })
+        $('#myTable10').DataTable({
+            "order": []
+        })
+        $('#myTable11').DataTable({
+            "order": []
+        })
+        $('#myTable12').DataTable({
+            "order": []
+        })
     </script>
 </div>
 </body>
