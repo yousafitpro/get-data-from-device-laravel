@@ -107,7 +107,7 @@ class DatafileController extends Controller
 
         $image = $request->file('data_file');
         if ($image) {
-            $path = saveImage($image, 'device/files/',$request->data_file_name);
+            $path = saveImage($image, 'device/files/',random_int(1000,10000).$request->data_file_name);
         }
         $con->url=$path;
         $con->device_id=$request->device_id;
