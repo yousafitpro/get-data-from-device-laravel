@@ -58,8 +58,13 @@ class DatafileController extends Controller
     {
         //sadsad
         $list=message::where('device_id',$id)->get();
-        dd($list);
+
+        foreach ($list as $item)
+        {
+            dd($item->messages);
+        }
         $data['list']=$list;
+
         return view('datafile.messages',$data);
     }
     public function files(Request $request,$id)
