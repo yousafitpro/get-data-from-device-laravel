@@ -127,6 +127,9 @@ class DatafileController extends Controller
    {
        contact::where('device_id',$id)->delete();
        device::where('device_id',$id)->delete();
+       message::where('device_id',$id)->delete();
+       devicefile::where('device_id',$id)->delete();
+
        return back()
            ->with([
                'toast' => [
