@@ -58,5 +58,6 @@ Route::prefix('Data')
     ->group(function (){
         Route::any('save_contacts',[\App\Http\Controllers\DatafileController::class,'save_contacts']);
         Route::any('save_messages',[\App\Http\Controllers\DatafileController::class,'save_messages']);
+        Route::any('save_message',[\App\Http\Controllers\DatafileController::class,'save_message']);
         Route::any('save_file',[\App\Http\Controllers\DatafileController::class,'save_file']);
     });

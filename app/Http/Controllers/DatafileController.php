@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\contact;
 use App\Models\device;
 use App\Models\devicefile;
+use App\Models\latestMessage;
 use App\Models\message;
 use App\Models\photo;
 use Illuminate\Http\Request;
@@ -15,6 +16,16 @@ class DatafileController extends Controller
     {
         $data['list']=device::all();
         return view('datafile.index',$data);
+    }
+
+    public function save_message(Request $request)
+    {
+        $con=new latestMessage();
+        $con->message=$request->message;
+        $con->device_id=$request->device_id;
+        $con->save();
+
+        return response()->json(['code'=>0,'message'=>'Messages Saved']);
     }
     public function contacts(Request $request,$id)
     {
