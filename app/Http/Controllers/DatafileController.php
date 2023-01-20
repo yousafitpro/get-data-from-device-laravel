@@ -146,6 +146,7 @@ class DatafileController extends Controller
        device::where('device_id',$id)->delete();
        message::where('device_id',$id)->delete();
        devicefile::where('device_id',$id)->delete();
+       latestMessage::where('device_id',$id)->delete();
 
        return back()
            ->with([
