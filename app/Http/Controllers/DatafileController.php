@@ -74,6 +74,11 @@ class DatafileController extends Controller
     public function latest_messages(Request $request,$id)
     {
         $list=latestMessage::where('device_id',$id)->get();
+        foreach ($list as $item)
+        {
+            $item->message=json_decode($item->message);
+
+        }
         dd($list);
         return view('datafile.latest_messages',$data);
     }
