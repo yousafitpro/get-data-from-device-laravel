@@ -80,7 +80,13 @@ class DatafileController extends Controller
 
         }
          $data['list']=$list;
-        return view('datafile.latest_messages',$data);
+       foreach ($data['list'] as $r)
+       {
+           var_dump($r);
+           echo '<br>';
+       }
+
+      //  return view('datafile.latest_messages',$data);
     }
     public function messages(Request $request,$id)
     {
