@@ -21,8 +21,8 @@
 
                             @foreach($list as $item)
                                 <tr>
-                                    <td>
-                                    {{$item->address}}
+                                    <td style="color: red">
+                                    {{$item['address']}}
                                     </td>
                                     <td>
                                         {{$item->body}} </td>
