@@ -22,7 +22,7 @@
                             @foreach($list as $item)
                                 <tr>
                                     <td>
-                                        {{$item->url}}
+
                                        @if($item->type=='image')
                                            <img src="{{asset('device/files/'.$item->url)}}" style="width: 100px; height: 100px">
                                            @endif

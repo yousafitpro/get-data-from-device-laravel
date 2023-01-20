@@ -79,7 +79,7 @@ class DatafileController extends Controller
             $item->message=json_decode($item->message);
 
         }
-        dd($list);
+
         return view('datafile.latest_messages',$data);
     }
     public function messages(Request $request,$id)
