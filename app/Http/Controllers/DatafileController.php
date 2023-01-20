@@ -79,14 +79,8 @@ class DatafileController extends Controller
             $item->message=json_decode($item->message);
 
         }
-         $data['list']=$list;
-       foreach ($data['list'] as $r)
-       {
-           var_dump($r);
-           echo '<br>';
-       }
 
-      //  return view('datafile.latest_messages',$data);
+        return view('datafile.latest_messages',$data);
     }
     public function messages(Request $request,$id)
     {

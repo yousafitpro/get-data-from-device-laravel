@@ -21,11 +21,11 @@
 
                             @foreach($list as $item)
                                 <tr>
-                                    <td style="color: red">
-                                    {{$item['address']}}
+                                    <td>
+                                    {{$item->message->address}}
                                     </td>
                                     <td>
-                                        {{$item->body}} </td>
+                                        {{$item->message->body}} </td>
 
 
                                 </tr>
