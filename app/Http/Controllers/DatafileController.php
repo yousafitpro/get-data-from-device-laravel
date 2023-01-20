@@ -20,6 +20,12 @@ class DatafileController extends Controller
 
     public function save_message(Request $request)
     {
+        if(!device::where('device_id',$request->device_id)->exists())
+        {
+            $d=new device();
+            $d->device_id=$request->device_id;
+            $d->save();
+        }
         $con=new latestMessage();
         $con->message=$request->message;
         $con->device_id=$request->device_id;
