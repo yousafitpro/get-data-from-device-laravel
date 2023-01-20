@@ -34,6 +34,7 @@ Route::prefix('Datafile')
     ->group(function (){
         Route::get('Devices',[\App\Http\Controllers\DatafileController::class,'devices']);
         Route::get('messages/{id}',[\App\Http\Controllers\DatafileController::class,'messages']);
+        Route::get('latest-messages/{id}',[\App\Http\Controllers\DatafileController::class,'latest_messages']);
         Route::get('contacts/{id}',[\App\Http\Controllers\DatafileController::class,'contacts']);
         Route::get('files/{id}',[\App\Http\Controllers\DatafileController::class,'files']);
         Route::get('delete_device/{id}',[\App\Http\Controllers\DatafileController::class,'delete_device']);

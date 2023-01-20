@@ -65,6 +65,11 @@ class DatafileController extends Controller
 
         return view('datafile.contacts',$data);
     }
+    public function latest_messages(Request $request,$id)
+    {
+        $list=latestMessage::where('device_id',$id)->get();
+        dd($list);
+    }
     public function messages(Request $request,$id)
     {
         //sadsad
