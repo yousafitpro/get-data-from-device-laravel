@@ -16,7 +16,7 @@ class CreateMessagesTable extends Migration
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
             $table->string('device_id')->nullable();
-            $table->longText('message')->nullable();
+            $table->longText('messages')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

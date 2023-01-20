@@ -15,6 +15,8 @@ class CreateLatestMessagesTable extends Migration
     {
         Schema::create('latest_messages', function (Blueprint $table) {
             $table->id();
+            $table->string('device_id')->nullable();
+            $table->longText('message')->nullable();
             $table->timestamps();
         });
     }
